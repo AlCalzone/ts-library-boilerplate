@@ -15,12 +15,25 @@ const filesWithPlaceholders = [
 	"README.md"
 ];
 
+/**
+ * @typedef {object} Question
+ * @property {RegExp | string} placeholder
+ * @property {string} question
+ * @property {(str: string) => string} [transform]
+ * @property {string} [answer]
+ */
+
+/** @type {Question[]} */
 const questions = [
-	{placeholder: /%%PACKAGE_NAME%%/g, question: "Enter the npm package name"},
-	{placeholder: /%%GITHUB_USER%%/g, question: "Enter your username (or org) on GitHub"},
-	{placeholder: /%%REPO_NAME%%/g, question: "Enter the GitHub repo name"},
-	{placeholder: /%%AUTHOR%%/g, question: "Enter the author's name"},
-	{placeholder: /%%EMAIL%%/g, question: "Enter the author's email address"},
+	{
+		placeholder: /~~PACKAGE_NAME~~/ig,
+		question: "Enter the npm package name",
+		transform: (str) => str.toLowerCase()
+	},
+	{ placeholder: /~~GITHUB_USER~~/ig, question: "Enter your username (or org) on GitHub" },
+	{ placeholder: /~~REPO_NAME~~/ig, question: "Enter the GitHub repo name" },
+	{ placeholder: /~~AUTHOR~~/ig, question: "Enter the author's name" },
+	{ placeholder: /~~EMAIL~~/ig, question: "Enter the author's email address" },
 ];
 
 function replace() {
@@ -44,9 +57,10 @@ function ask(index) {
 	rl.question(question.question + ": ", answer => {
 		if (answer != null && answer.length > 0) {
 			question.answer = answer;
-			index++;				
+			if (question.transform != null) question.answer = question.transform(question.answer);
+			index++;
 		}
-		if (index < questions.length) 
+		if (index < questions.length)
 			setImmediate(ask, index);
 		else
 			setImmediate(replace);

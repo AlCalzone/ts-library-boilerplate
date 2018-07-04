@@ -5,18 +5,18 @@
 
 # Define the used images
 node4: &node4
-  working_directory: &workdir_node4 ~/%%REPO_NAME%%/node4
+  working_directory: &workdir_node4 ~/~~REPO_NAME~~/node4
   docker:
     - image: circleci/node:4
 
 node6: &node6
-  working_directory: &workdir_node6 ~/%%REPO_NAME%%/node6
+  working_directory: &workdir_node6 ~/~~REPO_NAME~~/node6
   docker:
     - image: circleci/node:6
 
 # use "latest" for lint and publish
 latest: &latest
-  working_directory: &workdir_latest ~/%%REPO_NAME%%/latest
+  working_directory: &workdir_latest ~/~~REPO_NAME~~/latest
   docker:
     - image: circleci/node:8
 
