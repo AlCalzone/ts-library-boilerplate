@@ -7,7 +7,7 @@ test/
 tests/
 src/
 build/**/*.map
-~~PACKAGE_NAME~~-*.tgz
+%%PACKAGE_NAME%%-*.tgz
 .vs*/
 .nyc_output/
 bin/

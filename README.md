@@ -1,10 +1,10 @@
-# ~~REPO_NAME~~
+# %%REPO_NAME%%
 Boilerplate project for libraries written in TypeScript
 
-[![node](https://img.shields.io/node/v/~~PACKAGE_NAME~~.svg) ![npm](https://img.shields.io/npm/v/~~PACKAGE_NAME~~.svg)](https://www.npmjs.com/package/~~PACKAGE_NAME~~)
+[![node](https://img.shields.io/node/v/%%PACKAGE_NAME%%.svg) ![npm](https://img.shields.io/npm/v/%%PACKAGE_NAME%%.svg)](https://www.npmjs.com/package/%%PACKAGE_NAME%%)
 
-[![Build Status](https://img.shields.io/circleci/project/github/~~GITHUB_USER~~/~~REPO_NAME~~.svg)](https://circleci.com/gh/~~GITHUB_USER~~/~~REPO_NAME~~)
-[![Coverage Status](https://img.shields.io/coveralls/github/~~GITHUB_USER~~/~~REPO_NAME~~.svg)](https://coveralls.io/github/~~GITHUB_USER~~/~~REPO_NAME~~)
+[![Build Status](https://img.shields.io/circleci/project/github/%%GITHUB_USER%%/%%REPO_NAME%%.svg)](https://circleci.com/gh/%%GITHUB_USER%%/%%REPO_NAME%%)
+[![Coverage Status](https://img.shields.io/coveralls/github/%%GITHUB_USER%%/%%REPO_NAME%%.svg)](https://coveralls.io/github/%%GITHUB_USER%%/%%REPO_NAME%%)
 
 ## Features
 * TypeScript + TSLint

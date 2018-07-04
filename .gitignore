@@ -269,4 +269,4 @@ rfc/
 coverage/
 
 # npm packet files
-~~PACKAGE_NAME~~-*.tgz
+%%PACKAGE_NAME%%-*.tgz

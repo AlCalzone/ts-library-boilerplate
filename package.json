@@ -6,17 +6,17 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "author": {
-    "name": "~~AUTHOR~~",
-    "email": "~~EMAIL~~"
+    "name": "%%AUTHOR%%",
+    "email": "%%EMAIL%%"
   },
   "license": "MIT",
-  "homepage": "https://github.com/~~GITHUB_USER~~/~~REPO_NAME~~#readme",
+  "homepage": "https://github.com/%%GITHUB_USER%%/%%REPO_NAME%%#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/~~GITHUB_USER~~/~~REPO_NAME~~.git"
+    "url": "git+https://github.com/%%GITHUB_USER%%/%%REPO_NAME%%.git"
   },
   "bugs": {
-    "url": "https://github.com/~~GITHUB_USER~~/~~REPO_NAME~~/issues"
+    "url": "https://github.com/%%GITHUB_USER%%/%%REPO_NAME%%/issues"
   },
   "engines": {
     "node": ">=4.0.0"

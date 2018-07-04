@@ -12,6 +12,7 @@ const filesWithPlaceholders = [
 	".npmignore",
 	"LICENSE",
 	"package.json",
+	"package-lock.json",
 	"README.md"
 ];
 
@@ -26,14 +27,14 @@ const filesWithPlaceholders = [
 /** @type {Question[]} */
 const questions = [
 	{
-		placeholder: /~~PACKAGE_NAME~~/ig,
+		placeholder: /((%%)|(~~))PACKAGE_NAME((%%)|(~~))/ig,
 		question: "Enter the npm package name",
 		transform: (str) => str.toLowerCase()
 	},
-	{ placeholder: /~~GITHUB_USER~~/ig, question: "Enter your username (or org) on GitHub" },
-	{ placeholder: /~~REPO_NAME~~/ig, question: "Enter the GitHub repo name" },
-	{ placeholder: /~~AUTHOR~~/ig, question: "Enter the author's name" },
-	{ placeholder: /~~EMAIL~~/ig, question: "Enter the author's email address" },
+	{ placeholder: /%%GITHUB_USER%%/ig, question: "Enter your username (or org) on GitHub" },
+	{ placeholder: /%%REPO_NAME%%/ig, question: "Enter the GitHub repo name" },
+	{ placeholder: /%%AUTHOR%%/ig, question: "Enter the author's name" },
+	{ placeholder: /%%EMAIL%%/ig, question: "Enter the author's email address" },
 ];
 
 function replace() {
